@@ -1,0 +1,26 @@
+.container {
+  float: left;
+  position: relative;
+  min-width: 100px;
+  max-width: 200px;
+  min-height: 300px;
+}
+.object {
+  position: absolute;
+  min-width: 90px;
+}
+.row {
+	margin-left: 2%;
+}
+.span2 {
+	min-width: 200px;
+	margin-top: 10px;
+	padding-top: 20px;
+}
+.well {
+	margin-bottom: 0px;
+}
+.title {
+	min-width: 200px;
+	max-width: 250px;
+}
