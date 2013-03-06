@@ -4,8 +4,10 @@ function addColumn(){
 }
 
 function removeColumn(){
-  $('.col:last').remove();
-  $('.container').shapeshift();
+  if(('.col').length > 1){
+    $('.col:last').remove();
+    $('.container').shapeshift();
+  }
 }
 
 function addCard(){
