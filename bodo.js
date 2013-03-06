@@ -7,3 +7,8 @@ function removeColumn(){
   $('.col:last').remove();
   $('.container').shapeshift();
 }
+
+function addCard(){
+  $('.object:first').clone().appendTo('.col:first');
+  $('.container').shapeshift();
+}
