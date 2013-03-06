@@ -1,3 +1,4 @@
 function addColumn(){
-  $(".col:first").clone().appendTo(".bodo");
+  $('.col:first').clone().appendTo('.bodo');
+  $('.container').shapeshift(); 
 }
