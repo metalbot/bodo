@@ -8,6 +8,7 @@ function removeColumn(){
     $('.col:last').remove();
     $('.container').shapeshift();
   }
+  console.log(('.col').length);
 }
 
 function addCard(){
