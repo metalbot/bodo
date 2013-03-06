@@ -9,6 +9,6 @@ function removeColumn(){
 }
 
 function addCard(){
-  $('.object:first').clone().appendTo('.col:first');
+  $('.object:first').clone().appendTo('.container:first');
   $('.container').shapeshift();
 }
