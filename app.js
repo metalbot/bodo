@@ -12,3 +12,7 @@ var port = process.env.PORT || 5000;
 app.listen(port, function() {
   console.log("Listening on " + port);
 });
+
+app.get('/', function(req, res) {
+  app.use(express.static('bodo.html'));
+}
