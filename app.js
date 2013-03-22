@@ -14,5 +14,5 @@ app.listen(port, function() {
 });
 
 app.get('/', function(req, res) {
-  app.use(express.static('bodo.html'));
-}
+  app.use(express.static('bodo.html'));})
+
