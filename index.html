@@ -42,11 +42,11 @@
 			<div class="span2 col">
 				<div class="title well well-small"><h4 class="text-center">Column 2</h4></div>
 				<div class="container well well-small">
-	  					<div class="object btn btn-success btn-large">Card 1</div>
-	  					<div class="object btn btn-danger btn-large">Card 2</div>
-	  					<div class="object btn btn-warning btn-large">Card 3</div>
-	  					<div class="object btn btn-info btn-large">Card 4</div>
-	  					<div class="object btn btn-primary btn-large">Card 5</div>
+	  					<div class="object btn btn-success btn-large" data-toggle="modal" data-target="#cardModal">Card 1</div>
+	  					<div class="object btn btn-danger btn-large" data-toggle="modal" data-target="#cardModal">Card 2</div>
+	  					<div class="object btn btn-warning btn-large" data-toggle="modal" data-target="#cardModal">Card 3</div>
+	  					<div class="object btn btn-info btn-large" data-toggle="modal" data-target="#cardModal">Card 4</div>
+	  					<div class="object btn btn-primary btn-large" data-toggle="modal" data-target="#cardModal">Card 5</div>
         </div>
 			</div>
 			<div class="span2 col">
@@ -66,5 +66,17 @@
 				<div class="container well well-small"></div>
 			<div>
 		</div>
+    <div id="cardModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+        <h3 id="modalLabel">Edit Card</h3>
+      </div>
+      <div class="modal-body">
+        <p>Begin Card Edit Form</p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+      </div>
+    </div>
 	</body>
 </html>
