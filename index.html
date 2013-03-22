@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>bodo</title>
+		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+		<link href="bodo.css" rel="stylesheet">
+		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+		<script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
+		<script src="js/jquery.shapeshift.js"></script>
+		<script src="js/jquery.ui.touch-punch.min.js"></script>
+		<script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="bodo.js"></script>
+		<script type="text/javascript">
+			$(document).ready( function() {
+  			  	$('.container').shapeshift();
+			 });
+		</script>
+	</head>
+	<body>
+		<div class="navbar navbar-inverse">
+			<div class="navbar-inner">
+				<a class="brand" href="#">B&#333;do</a>
+				<ul class="nav">
+					<li>
+						<input type="text" class="search-query" placeholder="Enter Command">
+            <button type="button" class="btn btn-info" onClick="addColumn()">Add Column</button>
+            <button type="button" class="btn btn-danger" onClick="removeColumn()">Remove Column</button>
+            <button type="button" class="btn btn-success" onClick="addCard()">Add Card</button>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="row bodo">
+			<div class="span2 col">
+				<div class="title well well-small"><h4 class="text-center">Column 1</h4></div>
+				<div class="container well well-small">
+					
+				</div>
+			</div>
+			<div class="span2 col">
+				<div class="title well well-small"><h4 class="text-center">Column 2</h4></div>
+				<div class="container well well-small">
+	  					<div class="object btn btn-success btn-large">Card 1</div>
+	  					<div class="object btn btn-danger btn-large">Card 2</div>
+	  					<div class="object btn btn-warning btn-large">Card 3</div>
+	  					<div class="object btn btn-info btn-large">Card 4</div>
+	  					<div class="object btn btn-primary btn-large">Card 5</div>
+        </div>
+			</div>
+			<div class="span2 col">
+				<div class="title well well-small"><h4 class="text-center">Column 3</h4></div>
+				<div class="container well well-small"></div>
+			</div>
+			<div class="span2 col">
+				<div class="title well well-small"><h4 class="text-center">Column 4</h4></div>
+				<div class="container well well-small"></div>
+			</div>
+			<div class="span2 col">
+				<div class="title well well-small"><h4 class="text-center">Column 5</h4></div>
+				<div class="container well well-small"></div>
+			</div>
+			<div class="span2 col">
+				<div class="title well well-small"><h4 class="text-center">Column 6</h4></div>
+				<div class="container well well-small"></div>
+			<div>
+		</div>
+	</body>
+</html>
