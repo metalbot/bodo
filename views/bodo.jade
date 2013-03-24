@@ -1,9 +1,12 @@
 #cardModal.modal.hide.fade(tabindex="-1",role="dialog",aria-labeledby="modalLabel",aria-hidden="true")
   .modal-header
     button(type="button",class="close",data-dismiss="modal",aria-hidden="true") x
-    h4#modalLabel= story
+    h4#modalLabel= tagLine
   .modal-body
-    .row-fluid.well
+    .row-fluid.well-small
+      .span12
+        p.lead= story
+    .row-fluid.well-small
       .span12
         ul.inline
           each tag in tags
