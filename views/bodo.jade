@@ -14,10 +14,9 @@
               span.label.label-info= tag
     .row-fluid.well.well-small
       .span12
-        ul
-          each criterium in acceptanceCriteria
-            li
-              label.checkbox
-                input(type="checkbox",value="")= criterium
+        each criterium in acceptanceCriteria
+          label.checkbox
+            input(type="checkbox",value="")
+              = criterium
   .modal-footer
     button.btn(data-dismiss="modal",aria-hidden="true") Close
