@@ -1,0 +1,59 @@
+!!! 5
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title bodo
+    link(href='externs/bootstrap/css/bootstrap.min.css', rel='stylesheet', media='screen')
+    link(href='bodo.css', rel='stylesheet')
+    script(src='http://code.jquery.com/jquery-1.9.1.js')
+    script(src='http://code.jquery.com/ui/1.10.1/jquery-ui.js')
+    script(src='externs/jquery/jquery.shapeshift.js')
+    script(src='externs/jquery/jquery.ui.touch-punch.min.js')
+    script(src='externs/bootstrap/js/bootstrap.min.js')
+    script(src='bodo.js')
+    script(type='text/javascript')
+      $(document).ready( function() {
+      $('.container').shapeshift();
+      });
+  body
+    .navbar.navbar-inverse
+      .navbar-inner
+        a.brand(href='#') Bōdo
+        ul.nav
+          li
+            input.search-query(type='text', placeholder='Enter Command')
+            button.btn.btn-info(type='button', onclick='addColumn()') Add Column
+            button.btn.btn-danger(type='button', onclick='removeColumn()') Remove Column
+            button.btn.btn-success(type='button', onclick='addCard()') Add Card
+    .row.bodo
+      .span2.col
+        .title.well.well-small
+          h4.text-center Column 1
+        .container.well.well-small
+      .span2.col
+        .title.well.well-small
+          h4.text-center Column 2
+        .container.well.well-small
+          .object.btn.btn-success.btn-large(data-toggle='modal', data-target='#cardModal') Card 1
+          .object.btn.btn-danger.btn-large(data-toggle='modal', data-target='#cardModal') Card 2
+          .object.btn.btn-warning.btn-large(data-toggle='modal', data-target='#cardModal') Card 3
+          .object.btn.btn-info.btn-large(data-toggle='modal', data-target='#cardModal') Card 4
+          .object.btn.btn-primary.btn-large(data-toggle='modal', data-target='#cardModal') Card 5
+      .span2.col
+        .title.well.well-small
+          h4.text-center Column 3
+        .container.well.well-small
+      .span2.col
+        .title.well.well-small
+          h4.text-center Column 4
+        .container.well.well-small
+      .span2.col
+        .title.well.well-small
+          h4.text-center Column 5
+        .container.well.well-small
+      .span2.col
+        .title.well.well-small
+          h4.text-center Column 6
+        .container.well.well-small
+        div
