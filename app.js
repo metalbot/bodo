@@ -1,4 +1,6 @@
-var express = require('express');
+var express = require('express'),
+    mongo = require('mongodb');
+
 var app = express();
 
 app.use(express.static(__dirname));
@@ -6,10 +8,22 @@ app.use(express.static(__dirname));
 app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
 
-var card = {"tagLine":"Card Layout",
-            "story":"As a user, I want a basic card layout",
-            "tags":["card","story","tag","poc","layout","tasks"],
-            "acceptanceCriteria":["Show title","Show story","Show tags","Show acceptance criteria"]};
+var mongoUri = process.env.MONGOLAB_URI || process.env.MONGOLAB_URL || 'mongodb://localhost/mydb';
+
+function getCards(callback) {
+  mongo.Db.connect(mongoUri, function(err, db){
+    if(err) return callback(err);
+
+    db.collection('cards', function(err, collection){
+      if(err) return callback(err);
+      collection.find().toArray(callback);
+    });
+  });
+}
+
+getCards(function(err, items){
+  var card = items;
+});
 
 app.get('/', function(req, res){
   res.render('index',card);
