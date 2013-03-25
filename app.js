@@ -22,9 +22,9 @@ function getCards(callback) {
 }
 
 app.get('/', function(req, res){
-  getCards(function(err, card){
-    console.log(card);
-    res.render('index',card);
+  getCards(function(err, cards){
+    console.log(cards);
+    res.render('index',cards[0]);
   });
 });
 
