@@ -23,6 +23,7 @@ function getCards(callback) {
 
 app.get('/', function(req, res){
   getCards(function(err, card){
+    console.log(card);
     res.render('index',card);
   });
 });
