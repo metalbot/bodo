@@ -21,12 +21,10 @@ function getCards(callback) {
   });
 }
 
-getCards(function(err, items){
-  var card = items;
-});
-
 app.get('/', function(req, res){
-  res.render('index',card);
+  getCards(function(err, card){
+    res.render('index',card);
+  });
 });
 
 //Heroku
