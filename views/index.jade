@@ -16,7 +16,9 @@ html
     script(src='bodo.js')
     script(type='text/javascript')
       $(document).ready( function() {
-      $('.container').shapeshift();
+        $('.container').shapeshift();
+        $.fn.editable.defaults.mode = 'inline';
+        $('#title').editable();
       });
   body
     .navbar.navbar-inverse
