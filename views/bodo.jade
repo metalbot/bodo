@@ -6,7 +6,8 @@
   .modal-body
     .row-fluid.well.well-small
       .span12
-        p.lead= story
+        p#story.lead(data-type="textarea",data-url="/post",data-original-title="Enter your story")
+          = story
     .row-fluid.well.well-small
       .span12
         ul.inline
