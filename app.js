@@ -21,6 +21,14 @@ function getCards(callback) {
   });
 }
 
+//API
+
+app.get('/v0/cards', function(req, res){
+  getCards(function(req, res){
+    res.send(cards);
+  });
+});
+
 app.get('/', function(req, res){
   getCards(function(err, cards){
     console.log(cards);
