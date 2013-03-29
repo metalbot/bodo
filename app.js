@@ -28,7 +28,7 @@ function getCard(id, callback){
 
     db.collection('cards', function(err, collection){
       if(err) return callback(err);
-      collection.findOne({'_id':new ObjectID(id)},function(err, card){
+      collection.findOne({_id:new ObjectID(id)},function(err, card){
         if(err){
           return callback(err);
         } else{
