@@ -1,6 +1,5 @@
 var express = require('express'),
-    mongo = require('mongodb'),
-    bson = require('mongodb').BSONPure;
+    mongo = require('mongodb');
 
 var app = express();
 
@@ -29,7 +28,7 @@ function getCard(id, callback){
     db.collection('cards', function(err, collection){
       if(err) return callback(err);
       var obj_id = bson.ObjectId.createFromHexString(id);
-      collection.findOne({_id:id},function(err, card){
+      collection.findOne({'_id':new ObjectID(id)},function(err, card){
         if(err){
           return callback(err);
         } else{
