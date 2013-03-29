@@ -28,7 +28,6 @@ function getCard(id, callback){
 
     db.collection('cards', function(err, collection){
       if(err) return callback(err);
-      var obj_id = bson.ObjectId.createFromHexString(id);
       collection.findOne({'_id':new ObjectID(id)},function(err, card){
         if(err){
           return callback(err);
