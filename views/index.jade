@@ -13,7 +13,6 @@ html
     script(src='externs/jquery/jquery.ui.touch-punch.min.js')
     script(src='externs/bootstrap/js/bootstrap.min.js')
     script(src='externs/bootstrap-editable/js/bootstrap-editable.js')
-    script(src='bodo.js')
     script(type='text/javascript')
       $(document).ready( function() {
         $('.container').shapeshift();
@@ -28,9 +27,6 @@ html
         ul.nav
           li
             input.search-query(type='text', placeholder='Enter Command')
-            button.btn.btn-info(type='button', onclick='addColumn()') Add Column
-            button.btn.btn-danger(type='button', onclick='removeColumn()') Remove Column
-            button.btn.btn-success(type='button', onclick='addCard()') Add Card
     .row.bodo
       .span2.col
         .title.well.well-small
