@@ -1,5 +1,6 @@
 var express = require('express'),
-    mongo = require('mongodb');
+    mongo = require('mongodb'),
+    ObjectID = require('mongodb').ObjectID;
 
 var app = express();
 
