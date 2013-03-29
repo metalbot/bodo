@@ -1,5 +1,6 @@
 var express = require('express'),
-    mongo = require('mongodb');
+    mongo = require('mongodb'),
+    bson = require('mongodb').BSONPure;
 
 var app = express();
 
@@ -21,12 +22,44 @@ function getCards(callback) {
   });
 }
 
+function getCard(id, callback){
+  mongo.Db.connect(mongoUri, function(err, db){
+    if(err) return callback(err);
+
+    db.collection('cards', function(err, collection){
+      if(err) return callback(err);
+      var obj_id = bson.ObjectId.createFromHexString(id);
+      collection.findOne({_id:id},function(err, card){
+        if(err){
+          return callback(err);
+        } else{
+          return callback(card);
+        }
+    });
+  });
+});
+}
+
 //API
 
 app.get('/v0/cards', function(req, res){
   getCards(function(err, cards){
-    res.send(cards);
+    if(!err){
+      res.send(cards);
+    } else{
+      res.send(404, 'No cards found');
+    }
   });
+});
+
+app.get('/v0/cards/:id', function(req, res){
+  getCard(req.params.id, function(err, card){
+    if(!err){
+      res.send(card);
+    } else{
+      res.send(404, 'Card not found');
+    }
+  })
 });
 
 app.get('/', function(req, res){
