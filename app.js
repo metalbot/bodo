@@ -56,7 +56,7 @@ app.get('/v0/cards/:id', function(req, res){
     if(!err){
       res.send(card);
     } else{
-      res.send(404, 'Card not found');
+      res.send(404, err);
     }
   })
 });
