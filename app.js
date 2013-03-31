@@ -80,10 +80,13 @@ app.get('/v0/cards/:id', function(req, res){
 });
 
 app.post('/v0/cards', function(req, res){
+	console.log(req.body);
 	saveCard(req.body, function(err, card) {
 		if(!err) {
+			console.log(card);
 			res.send(card);
 		} else {
+			console.log(err);
 			res.send(500, err);
 		}
 	});
