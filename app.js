@@ -3,7 +3,7 @@ var express = require('express'),
     ObjectID = require('mongodb').ObjectID;
 
 var app = express();
-
+app.use(express.bodyParser());
 app.use(express.static(__dirname));
 
 app.set('views', __dirname + '/views');
@@ -11,6 +11,24 @@ app.set('view engine', 'jade');
 
 var mongoUri = process.env.MONGOLAB_URI || process.env.MONGOLAB_URL || 'mongodb://localhost/mydb';
 
+function saveCard(card,callback) {
+	mongo.Db.connect(mongoUri, function(err, db){
+		if(err) return callback(err);
+
+		db.collection('cards', function(err, collection) {
+			if(err) return callback(err);
+
+			collection.insert(card, function(err, newCard) {
+				if(err) {
+					return callback(err);
+				} else {
+					return callback(newCard);
+				}
+			});
+		});
+	});
+}
+			
 function getCards(callback) {
   mongo.Db.connect(mongoUri, function(err, db){
     if(err) return callback(err);
@@ -60,6 +78,18 @@ app.get('/v0/cards/:id', function(req, res){
     }
   })
 });
+
+app.post('/v0/cards', function(req, res){
+	saveCard(req.body, function(err, card) {
+		if(!err) {
+			res.send(card);
+		} else {
+			res.send(500, err);
+		}
+	});
+});
+
+}
 
 app.get('/', function(req, res){
   getCards(function(err, cards){
