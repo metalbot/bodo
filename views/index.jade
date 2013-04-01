@@ -36,11 +36,9 @@ html
         .title.well.well-small
           h4.text-center technology ideas
         .container.well.well-small
-          .object.btn.btn-success.btn-large(data-toggle='modal', data-target='#cardModal') Card 1
-          .object.btn.btn-danger.btn-large(data-toggle='modal', data-target='#cardModal') Card 2
-          .object.btn.btn-warning.btn-large(data-toggle='modal', data-target='#cardModal') Card 3
-          .object.btn.btn-info.btn-large(data-toggle='modal', data-target='#cardModal') Card 4
-          .object.btn.btn-primary.btn-large(data-toggle='modal', data-target='#cardModal') Card 5
+          each card in cards  
+              .object.btn.btn-success.btn-large(data-toggle='modal', data-target='#cardModal')
+                  card.title
       .span2.col
         .title.well.well-small
           h4.text-center understand &amp; refine
