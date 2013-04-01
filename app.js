@@ -94,8 +94,7 @@ app.post('/v0/cards', function(req, res){
 
 app.get('/', function(req, res){
   getCards(function(err, cards){
-    console.log(cards);
-    res.render('index',cards[0]);
+    res.render('index',cards);
   });
 });
 
