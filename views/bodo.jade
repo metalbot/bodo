@@ -2,21 +2,21 @@
   .modal-header
     button(type="button",class="close",data-dismiss="modal",aria-hidden="true") x
     h4#title(data-type="text",data-url="/post",data-original-title="Enter a title for your story")
-      = title
+        = cards[0].title
   .modal-body
     .row-fluid.well.well-small
       .span12
         p#story.lead(data-type="textarea",data-url="/post",data-original-title="Enter your story")
-          = story
+          = cards[0].story
     .row-fluid.well.well-small
       .span12
         ul.inline
-          each tag in tags
+          each tag in cards[0].tags
             li
               span.label.label-info= tag
     .row-fluid.well.well-small
       .span12
-        each crit in accept
+        each crit in cards[0].accept
           label.checkbox
             input(type="checkbox")
             = crit
