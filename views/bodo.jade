@@ -1,22 +1,24 @@
 #cardModal.modal.hide.fade(tabindex="-1",role="dialog",aria-labeledby="title",aria-hidden="true")
+  -var cardId = $('#cardModal').data('modal').options.card;
+  -var card = function(){ for(i=0;i<cards.length;i++){ if(cards[i]._id == cardId) return cards[i];}};
   .modal-header
     button(type="button",class="close",data-dismiss="modal",aria-hidden="true") x
     h4#title(data-type="text",data-url="/post",data-original-title="Enter a title for your story")
-        = cards[0].title
+        = card.title
   .modal-body
     .row-fluid.well.well-small
       .span12
         p#story.lead(data-type="textarea",data-url="/post",data-original-title="Enter your story")
-          = cards[0].story
+          = card.story
     .row-fluid.well.well-small
       .span12
         ul.inline
-          each tag in cards[0].tags
+          each tag in card.tags
             li
               span.label.label-info= tag
     .row-fluid.well.well-small
       .span12
-        each crit in cards[0].accept
+        each crit in card.accept
           label.checkbox
             input(type="checkbox")
             = crit

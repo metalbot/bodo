@@ -37,7 +37,7 @@ html
           h4.text-center technology ideas
         .container.well.well-small
           each card in cards  
-              .object.btn.btn-success.btn-large(data-toggle='modal', data-target='#cardModal')
+              .object.btn.btn-success.btn-large(data-toggle='modal', data-target='#cardModal', data-card=card._id)
                  = card.title
       .span2.col
         .title.well.well-small
