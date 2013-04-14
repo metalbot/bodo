@@ -1,59 +1,8 @@
 !!! 5
 html
-  head
-    meta(charset='utf-8')
-    meta(name='viewport', content='width=device-width, initial-scale=1.0')
-    title bodo
-    link(href='externs/bootstrap/css/bootstrap.min.css', rel='stylesheet', media='screen')
-    link(href='externs/bootstrap-editable/css/bootstrap-editable.css', rel='stylesheet')
-    link(href='bodo.css', rel='stylesheet')
-    script(src='http://code.jquery.com/jquery-1.9.1.js')
-    script(src='http://code.jquery.com/ui/1.10.1/jquery-ui.js')
-    script(src='externs/jquery/jquery.shapeshift.js')
-    script(src='externs/jquery/jquery.ui.touch-punch.min.js')
-    script(src='externs/bootstrap/js/bootstrap.min.js')
-    script(src='externs/bootstrap-editable/js/bootstrap-editable.js')
-    script(type='text/javascript')
-      $(document).ready( function() {
-        $('.container').shapeshift();
-        $.fn.editable.defaults.mode = 'inline';
-        $('#title').editable();
-        $('#story').editable();
-      });
-  body
-    .navbar.navbar-inverse
-      .navbar-inner
-        a.brand(href='#') Bōdo
-        ul.nav
-          li
-            input.search-query(type='text', placeholder='Enter Command')
-    .row.bodo
-      .span2.col
-        .title.well.well-small
-          h4.text-center MMFs
-        .container.well.well-small
-      .span2.col
-        .title.well.well-small
-          h4.text-center technology ideas
-        .container.well.well-small
-          each card in cards  
-              .object.btn.btn-success.btn-large(data-toggle='modal', data-target='#cardModal', data-card=card._id)
-                 = card.title
-      .span2.col
-        .title.well.well-small
-          h4.text-center understand &amp; refine
-        .container.well.well-small
-      .span2.col
-        .title.well.well-small
-          h4.text-center commit
-        .container.well.well-small
-      .span2.col
-        .title.well.well-small
-          h4.text-center do/build &amp; verify
-        .container.well.well-small
-      .span2.col
-        .title.well.well-small
-          h4.text-center observe &amp; learn
-        .container.well.well-small
-        div
+    include head
+    include header
     include bodo
+       include kanban
+    include footer
+    include scripts

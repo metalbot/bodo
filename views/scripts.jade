@@ -1,0 +1,14 @@
+script(src='http://code.jquery.com/jquery-1.9.1.js')
+script(src='http://code.jquery.com/ui/1.10.1/jquery-ui.js')
+script(src='externs/jquery/jquery.shapeshift.js')
+script(src='externs/jquery/jquery.ui.touch-punch.min.js')
+script(src='externs/bootstrap/js/bootstrap.min.js')
+script(src='externs/bootstrap-editable/js/bootstrap-editable.js')
+script(type='text/javascript')
+  $(document).ready( function() {
+    $('.container').shapeshift();
+    $.fn.editable.defaults.mode = 'inline';
+    $('#title').editable();
+    $('#story').editable();
+  });
+
