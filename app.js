@@ -40,6 +40,17 @@ function getCards(callback) {
   });
 }
 
+function getBoards(callback) {
+  mongo.Db.connect(mongoUri, function(err, db){
+    if(err) return callback(err);
+
+    db.collection('boards', function(err, collection){
+      if(err) return callback(err);
+      collection.find().toArray(callback);
+    });
+  });
+}
+
 function getCard(id, callback){
   mongo.Db.connect(mongoUri, function(err, db){
     if(err) return callback(err);
@@ -93,8 +104,9 @@ app.post('/v0/cards', function(req, res){
 });
 
 app.get('/', function(req, res){
-  getCards(function(err, cards){
-    res.render('index',{cards: cards});
+	getBoards(function(err, boards){
+		getCards(function(err, cards){
+			res.render('index',{board: boards[0], cards: cards});
   });
 });
 

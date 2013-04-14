@@ -1,29 +1,6 @@
 .row.bodo
-  .span2.col
-    .title.well.well-small
-      h4.text-center MMFs
-    .container.well.well-small
-  .span2.col
-    .title.well.well-small
-      h4.text-center technology ideas
-    .container.well.well-small
-      each card in cards  
-          .object.btn.btn-success.btn-large(data-toggle='modal', data-target='#cardModal', data-card=card._id)
-             = card.title
-  .span2.col
-    .title.well.well-small
-      h4.text-center understand &amp; refine
-    .container.well.well-small
-  .span2.col
-    .title.well.well-small
-      h4.text-center commit
-    .container.well.well-small
-  .span2.col
-    .title.well.well-small
-      h4.text-center do/build &amp; verify
-    .container.well.well-small
-  .span2.col
-    .title.well.well-small
-      h4.text-center observe &amp; learn
-    .container.well.well-small
-
+    each phase in phases
+        .span2.col
+            .title.well.well-small
+                h4.text-center= title
+            .container.well.well-small
