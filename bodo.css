@@ -1,13 +1,16 @@
+body {
+	padding: 40px;
+}
 .container {
-  float: left;
-  position: relative;
-  min-width: 100px;
-  max-width: 200px;
-  min-height: 300px;
+	float: left;
+	position: relative;
+	min-width: 100px;
+	max-width: 200px;
+	min-height: 300px;
 }
 .object {
-  position: absolute;
-  min-width: 90px;
+	position: absolute;
+	min-width: 90px;
 }
 .row {
 	margin-left: 2%;
