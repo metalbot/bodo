@@ -106,7 +106,7 @@ app.post('/v0/cards', function(req, res){
 app.get('/', function(req, res){
 	getBoards(function(err, boards){
 		getCards(function(err, cards){
-			res.render('index',{boards: boards, cards: cards});
+			res.render('index',{boards: boards[0], cards: cards});
 		});
 	});
 });
