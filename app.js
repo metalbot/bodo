@@ -9,7 +9,7 @@ app.use(express.static(__dirname));
 app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
 
-var mongoUri = process.env.MONGOLAB_URI || process.env.MONGOLAB_URL_TEST || 'mongodb://localhost/mydb';
+var mongoUri = process.env.MONGOLAB_URI || process.env.MONGOLAB_URL || 'mongodb://localhost/mydb';
 
 function saveCard(card,callback) {
 	mongo.Db.connect(mongoUri, function(err, db){
