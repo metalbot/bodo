@@ -1,6 +1,11 @@
 .navbar.navbar-inverse.navbar-fixed-top
     .navbar-inner
         a.brand(href='#') Bōdo
-        ul.nav
-            li
-                h2.brand= board.title
+        p.text-centered.brand= boards.title
+        .btn-group
+            button.btn.btn-inverse.dropdown-toggle(data-toggle="dropdown" href="#")
+                Boards
+                span.caret
+            ul.dropdown-menu
+                each board in boards
+                    a(href='#')= board.title
