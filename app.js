@@ -104,11 +104,11 @@ app.post('/v0/cards', function(req, res){
 });
 
 app.get('/', function(req, res){
-//	getBoards(function(err, boards){
-//		getCards(function(err, cards){
+	getBoards(function(err, boards){
+		getCards(function(err, cards){
 			res.render('index');
-//		});
-//	});
+		});
+	});
 });
 
 //Heroku
