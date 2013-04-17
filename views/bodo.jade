@@ -1,7 +1,9 @@
 .row.bodo
     each phase in boards[0].phases
         .span2.col
-            .row.title.well.well-small
-                h4.text-center= phase.title
-            .row.container.well.well-small
-                include kanban
+            .row
+                .span2.title.well.well-small
+                    h4.text-center= phase.title
+            .row
+                .span2.container.well.well-small
+                    include kanban
