@@ -2,22 +2,9 @@ body {
 	padding: 40px;
 	background-color: #555;
 }
-.container {
-	float: left;
-	position: relative;
-	width: 100%;
-}
 .object {
 	position: absolute;
 	min-width: 90px;
-}
-.row {
-	margin-left: 2%;
-}
-}
-.well {
-	margin-bottom: 0px;
-	margin-left: 0px;
 }
 .bodo {
 	padding-top: 45px;
