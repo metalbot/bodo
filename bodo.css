@@ -4,7 +4,10 @@ body {
 }
 .container {
 	position: relative;
-	width: 100%;
+	min-width: 200px;
+}
+.title {
+	min-width: 200px;
 }
 .container div {
 	position: absolute;
