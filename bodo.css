@@ -2,9 +2,13 @@ body {
 	padding: 40px;
 	background-color: #555;
 }
-.object {
+.container {
+	position: relative;
+	width: 100%;
+}
+.container div {
 	position: absolute;
-	min-width: 90px;
+	min-width: 100px;
 }
 .bodo {
 	padding-top: 45px;
