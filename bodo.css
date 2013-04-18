@@ -2,13 +2,14 @@ body {
 	padding: 40px;
 	background-color: #555;
 }
+.span2 {
+	margin-left: 2px;
+}
 .title {
 	background-color: white;
+	margin-bottom: 2px;
 }
 .column {
-	height: 90%;
+	height: 100%;
 	background-color: white;
-}
-.bodo {
-	padding-top: 45px;
 }
