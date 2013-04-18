@@ -2,8 +2,10 @@
     each phase in boards[0].phases
         .span2
             .row
-                .span2.title.well.well-small
-                    h4.text-center= phase.title
+                .well.well-small
+                    .span2.title
+                        h4.text-center= phase.title
             .row
-                .span2.container.well.well-small
-                    include kanban
+                .well.well-small
+                    .span2.column
+                        include kanban

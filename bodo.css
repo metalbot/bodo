@@ -2,6 +2,12 @@ body {
 	padding: 40px;
 	background-color: #555;
 }
+.title {
+	margin-bottom: 0px;
+}
+.column {
+	height: 90%;
+}
 .bodo {
 	padding-top: 45px;
 }
