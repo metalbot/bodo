@@ -2,7 +2,7 @@ body {
 	padding: 40px;
 	background-color: #555;
 }
-.span2 {
+.row-fluid [class*="span"] {
 	margin-left: 2px;
 }
 .title {
