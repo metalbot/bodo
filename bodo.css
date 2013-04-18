@@ -2,18 +2,6 @@ body {
 	padding: 40px;
 	background-color: #555;
 }
-.container {
-	position: relative;
-	min-width: 200px;
-}
-.title {
-	min-width: 200px;
-	margin-bottom: 0px;
-}
-.container div {
-	position: absolute;
-	min-width: 100px;
-}
 .bodo {
 	padding-top: 45px;
 }
