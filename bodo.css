@@ -3,11 +3,12 @@ body {
 	background-color: #555;
 }
 .title {
-	margin-bottom: 0px;
+	margin-bottom: 0;
 }
 .column {
 	height: 90%;
 	background-color: white;
+	margin: 0;
 }
 .bodo {
 	padding-top: 45px;
