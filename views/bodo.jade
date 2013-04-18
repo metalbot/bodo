@@ -1,11 +1,12 @@
-.row.bodo
+.container-fluid
+.row-fluid.bodo
     each phase in boards[0].phases
         .span2
-            .row
+            .row-fluid
                 .well.well-small
                     .span2.title
                         h4.text-center= phase.title
-            .row
-                .well.well-small
+            .row-fluid
+                .well
                     .span2.column
                         include kanban
