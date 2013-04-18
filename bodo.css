@@ -4,7 +4,7 @@ body {
 }
 .row-fluid [class*="span"] {
 	margin-left: 2px;
-	min-height: 80px;
+	min-height: 60px;
 }
 .title {
 	background-color: white;
