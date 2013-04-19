@@ -17,11 +17,11 @@ body {
 .well {
 	margin-bottom: 0;
 }
-.container {
+.ss-container {
 	position: relative;
 	width: 100%;
 }
-.container div {
+.ss-container div {
 	min-height: 50px;
 	min-width: 50px;
 	position: absolute;
