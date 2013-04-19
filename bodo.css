@@ -2,30 +2,19 @@ body {
 	padding: 40px;
 	background-color: #555;
 }
+.bodo {
+	background-color: white;
+}
 .row-fluid [class*="span"] {
 	margin-left: 2px;
 	min-height: 60px;
 }
-.title {
-	background-color: white;
-	margin-bottom: 2px;
-}
-.column {
-	height: 100%;
-	background-color: white;
-}
-.well {
-	margin-bottom: 0;
-}
-.ss-container, .ss-board {
+.ss-container {
 	position: relative;
 	width: 100%;
 }
-.ss-container div, .ss-board div {
+.ss-container div {
 	min-height: 50px;
 	min-width: 50px;
 	position: absolute;
-}
-.ss-column {
-	display: table-cell;
 }
