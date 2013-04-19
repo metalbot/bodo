@@ -1,11 +1,8 @@
-.container-fluid.bodo
-    .row-fluid
-        .span12
-            each phase in boards[0].phases
-                .ss-column
-                    .row-fluid.title
-                        .span12
-                             h4.text-center= phase.title
-                    .row-fluid.column
-                        .span12.well.ss-container
-                             include kanban
+table.bodo
+    row
+        each phase in boards[0].phases
+            th.title
+                h4.text-center= phase.title
+            td.column
+                .well.ss-container
+                     include kanban
