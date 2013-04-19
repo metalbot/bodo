@@ -26,3 +26,6 @@ body {
 	min-width: 50px;
 	position: absolute;
 }
+.ss-column {
+	display: table-cell;
+}
