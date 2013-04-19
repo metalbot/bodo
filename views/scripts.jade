@@ -6,5 +6,7 @@ script(src='externs/bootstrap/js/bootstrap.min.js')
 script(src='externs/bootstrap-editable/js/bootstrap-editable.js')
 script(type='text/javascript')
     $(document).ready( function() {
+        options = {enableDrag: false, enableCrossDrop: false};
+        $('.ss-board').shapeshift(options);
         $('.ss-container').shapeshift();
     });
