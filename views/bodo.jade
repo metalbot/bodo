@@ -1,9 +1,10 @@
-table.bodo
-    tr
-        each phase in boards[0].phases
-            th.title
-                h4.text-center= phase.title
-    tr
-        each phase in boards[0].phases
-            td.ss-container
-                include kanban
+.bodo
+    .container-fluid
+        .row-fluid
+            each phase in boards[0].phases
+                .span2.well.well-small.title
+                    strong.text-center= phase.title
+        .row-fluid 
+            each phase in boards[0].phases
+                .span2.well.well-small.ss-container
+                    include kanban
