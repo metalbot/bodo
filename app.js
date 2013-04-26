@@ -1,13 +1,29 @@
 var express = require('express'),
+	routes = require('./routes'),
+	api = require('./routes/api'),
     mongo = require('mongodb'),
     ObjectID = require('mongodb').ObjectID;
 
-var app = express();
-app.use(express.bodyParser());
-app.use(express.static(__dirname));
+var app = module.exports = express();
 
-app.set('views', __dirname + '/views');
-app.set('view engine', 'jade');
+// Configuration
+
+app.configure(function(){
+	app.set('views', __dirname + '/views');
+	app.set('view engine', 'jade');
+	app.use(express.bodyParser());
+	app.use(express.methodOverride());
+	app.use(express.static(__dirname + 'public'));
+	app.use(app.router);
+});
+
+app.configure('development', function(){
+	app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
+});
+
+app.configure('production', function(){
+	app.use(express.errorHandler());
+});
 
 var mongoUri = process.env.MONGOLAB_URI || process.env.MONGOLAB_URL || 'mongodb://localhost/mydb';
 
@@ -24,8 +40,7 @@ function saveCard(card,callback) {
 				} else {
 					return callback(newCard);
 				}
-			});
-		});
+			}); });
 	});
 }
 			
@@ -116,4 +131,3 @@ var port = process.env.PORT || 5000;
 app.listen(port, function() {
   console.log("Listening on " + port);
 });
-
