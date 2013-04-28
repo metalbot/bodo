@@ -31,4 +31,4 @@ function BoardCtrl($scope) {
 						"title": "observe & learn"
 					}
 			    ]
-	}];
+	}]};
