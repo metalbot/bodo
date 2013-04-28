@@ -1,5 +1,5 @@
 function BoardCtrl($scope) {
-	$scope.boards = [
+	$scope.board = [
 	{
 	   	"_id": {
 		        "$oid": "516b1ed7e4b03ed094d98458"							   
