@@ -1,6 +1,5 @@
 function BoardCtrl($scope) {
-	$scope.board = [
-	{
+	$scope.board = {
 	   	"_id": {
 		        "$oid": "516b1ed7e4b03ed094d98458"							   
 				},
@@ -31,4 +30,5 @@ function BoardCtrl($scope) {
 						"title": "observe & learn"
 					}
 			    ]
-	}]};
+		}
+	};

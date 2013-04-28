@@ -1,7 +1,17 @@
 var data = require('../lib/data');
 
-exports.getCards = function(req, res){
-  data.getCards(function(err, cards){
+exports.getBoards = function(req, res) {
+	data.getBoards(function(err, boards) {
+		if(!err) {
+			res.send(boards);
+		} else {
+			res.send(404, 'No boards found');
+		}
+	});
+};
+
+exports.getCards = function(req, res) {
+  data.getCards(function(err, cards) {
     if(!err){
       res.send(cards);
     } else{
@@ -10,8 +20,8 @@ exports.getCards = function(req, res){
   });
 };
 
-exports.getCardById = function(req, res){
-  data.getCard(req.params.id, function(err, card){
+exports.getCardById = function(req, res) {
+  data.getCard(req.params.id, function(err, card) {
     if(!err){
       res.send(card);
     } else{
@@ -20,7 +30,7 @@ exports.getCardById = function(req, res){
   })
 };
 
-exports.saveCard = function(req, res){
+exports.saveCard = function(req, res) {
 	console.log(req.body);
 	data.saveCard(req.body, function(err, card) {
 		if(!err) {

@@ -25,9 +25,10 @@ app.configure('production', function(){
 });
 
 app.get('/', routes.index);
+app.get('/v0/boards', api.getBoards);
 app.get('/v0/cards', api.getCards);
-app.get('v0/cards/:id', api.getCardById);
-app.post('v0/cards', api.saveCard);
+app.get('/v0/cards/:id', api.getCardById);
+app.post('/v0/cards', api.saveCard);
 
 //Heroku
 var port = process.env.PORT || 5000;
