@@ -1,10 +1,9 @@
-.bodo
-    .container-fluid
-        .row-fluid
-            each phase in boards[0].phases
-                .span2.well.well-small.title.text-center
-                    strong= phase.title
-        .row-fluid 
-            each phase in boards[0].phases
-                .span2.well.well-small.ss-container
+body(ng-controller="BoardCtrl")
+    .bodo
+        .container-fluid
+            .row-fluid
+                .span2.well.well-small.title.text-center(ng-repeat="phase in board.phases")
+                    strong{{phase.title}}
+            .row-fluid 
+                .span2.well.well-small.ss-container(ng-repeat="phase in board.phases")
                     include kanban
