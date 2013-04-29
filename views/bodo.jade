@@ -6,4 +6,7 @@ body
                     strong{{phase.title}}
             .row-fluid 
                 .span2.well.well-small.ss-container(ng-repeat="phase in board.phases")
-                    include kanban
+                    ul.unstyled
+                        .card.hero-unit(ng-repeat="card in cards")
+                            h3{{card.title}}
+                            p{{card.story}}
