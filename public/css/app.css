@@ -21,3 +21,9 @@ body {
 .title {
 	margin-bottom: 2px;
 }
+.card {
+	padding: 5px;
+	border-style: solid;
+	border-width: thin;
+	border-color: black;
+}

@@ -2,11 +2,15 @@ body
     .bodo(ng-controller="BoardCtrl")
         .container-fluid
             .row-fluid
-                .span2.well.well-small.title.text-center(ng-repeat="phase in board.phases")
-                    strong{{phase.title}}
-            .row-fluid 
-                .span2.well.well-small.ss-container(ng-repeat="phase in board.phases")
-                    ul.unstyled
-                        .card.hero-unit(ng-repeat="card in cards")
-                            h3{{card.title}}
-                            p{{card.story}}
+                .span12
+                    .hero-unit
+                        ol.unstyled.inline
+                            li(ng-repeat="phase in board.phases")
+                                .well.well-small.title.text-center                    
+                                    strong{{phase.title}}
+                                .well.well-small                    
+                                    ol.unstyled
+                                        li(ng-repeat="card in cards")
+                                            .card
+                                                strong{{card.title}}
+                                                p{{card.story}}
