@@ -1,1 +1,1 @@
-var bodo = angular.module('bodo', []);
+var bodo = angular.module('bodo', ['bodo.filters']);

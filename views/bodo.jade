@@ -3,14 +3,14 @@ body
         .container-fluid
             .row-fluid
                 .span12
-                    .hero-unit
-                        ol.unstyled.inline
-                            li(ng-repeat="phase in board.phases")
-                                .well.well-small.title.text-center                    
-                                    strong{{phase.title}}
-                                .well.well-small                    
-                                    ol.unstyled
-                                        li(ng-repeat="card in cards")
-                                            .card
-                                                strong{{card.title}}
-                                                p{{card.story}}
+                    ol.board.unstyled.inline
+                        li.column(ng-repeat="phase in board.phases")
+                            .well.well-small.title.text-center                    
+                                strong{{phase.title}}
+                            .well.well-small.card-container 
+                                ol.unstyled
+                                    li(ng-repeat="card in cards | byPhase:phase.phase")
+                                        .card
+                                            strong{{card.title}}
+                                            em.text-right{{card.user}}
+                                            p{{card.story}}

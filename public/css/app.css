@@ -26,4 +26,17 @@ body {
 	border-style: solid;
 	border-width: thin;
 	border-color: black;
+	min-width: 100px;
+	min-height: 100px;
+	max-width: 300px;
+	max-height: 300px;
+}
+.card-container {
+	min-height: 400px;
+}
+.board {
+	display: table-row;
+}
+.column {
+	display: table-cell !important;
 }
