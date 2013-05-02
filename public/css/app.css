@@ -3,7 +3,7 @@ body {
 	background-color: #555;
 }
 .bodo {
-	background-color: white;
+	background-color: #555;
 }
 .row-fluid [class*="span"] {
 	margin-left: 2px;
@@ -21,23 +21,13 @@ body {
 .title {
 	margin-bottom: 2px;
 }
-.card {
-	padding: 5px;
-	margin-bottom: 5px;
-	border-style: solid;
-	border-width: thin;
-	border-color: black;
-	min-width: 100px;
-	min-height: 100px;
-	max-width: 300px;
-	max-height: 300px;
-}
 .card-container {
-	min-height: 405px;
+	min-height: 550px;
 }
 .board {
 	display: table-row;
 }
 .column {
 	display: table-cell !important;
+	padding-left: 0 !important;
 }

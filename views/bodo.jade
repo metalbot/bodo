@@ -8,6 +8,6 @@ body
                             .well.well-small.title.text-center                    
                                 strong{{phase.title}}
                             .well.well-small.card-container 
-                                ol.unstyled
+                                ol.thumbnails
                                     li(ng-repeat="card in cards | byPhase:phase.phase")
                                         include kanban
