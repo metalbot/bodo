@@ -10,7 +10,4 @@ body
                             .well.well-small.card-container 
                                 ol.unstyled
                                     li(ng-repeat="card in cards | byPhase:phase.phase")
-                                        .card
-                                            strong{{card.title}}
-                                            em.text-right{{card.user}}
-                                            p{{card.story}}
+                                        include kanban

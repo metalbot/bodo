@@ -1,3 +1,7 @@
-each card in cards  
-    .btn.btn-success.btn-large(data-toggle='modal', data-target='#cardModal', data-card=card._id)= card.title
+.card
+    p.text-left
+        strong{{card.title}}
+    blockquote
+        p.text-justify{{card.story}}        
+        small{{card.user}}
 
