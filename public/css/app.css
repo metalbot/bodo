@@ -20,6 +20,7 @@ body {
 }
 .title {
 	margin-bottom: 2px;
+	white-space: nowrap;
 }
 .card-container {
 	min-height: 550px;
@@ -30,4 +31,11 @@ body {
 .column {
 	display: table-cell !important;
 	padding-left: 0 !important;
+}
+.story {
+	font-size: 14px;
+}
+.card {
+	margin-bottom: 5px !important;
+	margin-left: 5px !important;
 }
