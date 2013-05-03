@@ -30,15 +30,24 @@ body {
 }
 .column {
 	display: table-cell !important;
-	padding-left: 0 !important;
+	padding-left: 0px !important;
+	min-width: 150px;
+	max-width: 220px;
 }
 .story {
 	font-size: 14px;
 }
 .card {
+	min-width: 100px;
+	max-width: 200px;
+	min-height: 100px;
 	margin-bottom: 5px !important;
 	margin-left: 5px !important;
 	-moz-box-shadow: 5px 5px 5px #888;
 	-webkit-box-shadow: 5px 5px 5px #888;
 	box-shadow: 5px 5px 5px #888;
+}
+.hr-dark {
+	margin: 5px 5px 10px !important;
+	border-top: 1px solid #888; !important;
 }
