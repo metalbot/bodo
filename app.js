@@ -25,6 +25,7 @@ app.configure('production', function(){
 });
 
 app.get('/', routes.index);
+app.get('/partials/:name', routes.partials);
 app.get('/v0/boards', api.getBoards);
 app.get('/v0/cards', api.getCards);
 app.get('/v0/cards/:id', api.getCardById);

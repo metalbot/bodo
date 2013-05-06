@@ -1,1 +1,1 @@
-var bodo = angular.module('bodo', ['bodo.filters']);
+var app = angular.module('bodo', ['ui.bootstrap.dialog', 'bodo.filters']);

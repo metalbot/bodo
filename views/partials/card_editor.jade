@@ -1,0 +1,13 @@
+.modal
+    .modal-header
+        h1{{card.title}}
+    .modal-body
+        p.blockquote{{card.story}}
+        small{{card.user}}
+        .well
+            ul 
+                li(ng-repeat="task in card.accept"){{task}}
+            span.label.label-info(ng-repeat="tag in card.tags"){{tag}}
+    .modal-footer
+        button.btn.btn-primary(ng-click="close()") Close
+        button.btn.btn-primary(ng-click="save()") Save
