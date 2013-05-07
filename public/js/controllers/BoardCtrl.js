@@ -23,6 +23,7 @@ function BoardCtrl($scope, $dialog, $http) {
 	  .then(function(result) {
 		if(result) {
 		  angular.copy(result, cardToEdit);                
+		  saveCard($http, result);
 		}
 		cardToEdit = undefined;
 	});
@@ -40,4 +41,16 @@ function EditCtrl($scope, card, dialog){
 	$scope.close = function(){
 		dialog.close(undefined);
 	};
+}
+
+function saveCard($http, card) {
+	$http.post('/v0/cards/' + card._id, card).then(function (response) {
+		for(var i = 0; i < $scope.cards.length; i++) {
+			if($scope.cards[i]._id === card._id) {
+				$scope.cards[i] = card;
+				return;
+			}
+		}
+		$scope.cards.push(card);
+	});	
 }

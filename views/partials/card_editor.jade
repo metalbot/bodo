@@ -1,13 +1,15 @@
 .modal
-    .modal-header
-        h1{{card.title}}
-    .modal-body
-        p.blockquote{{card.story}}
-        small{{card.user}}
-        .well
-            ul 
-                li(ng-repeat="task in card.accept"){{task}}
-            span.label.label-info(ng-repeat="tag in card.tags"){{tag}}
-    .modal-footer
-        button.btn.btn-primary(ng-click="close()") Close
-        button.btn.btn-primary(ng-click="save()") Save
+    .form
+        .modal-body
+            input.wide(type="text", ng-model="card.title", placeholder="card.title")
+            textarea.wide(rows="5", ng-model="card.story", placeholder="card.story")
+            input.wide(type="text", ng-model="card.user", placeholder="card.user")
+            .well
+                ul 
+                    li(ng-repeat="task in card.accept"){{task}}
+                ul.inline
+                    li(ng-repeat="tag in card.tags")
+                        span.label.label-info{{tag}}
+        .modal-footer
+            button.btn.btn-primary(ng-click="close()") Close
+            button.btn.btn-primary(ng-click="save()") Save
