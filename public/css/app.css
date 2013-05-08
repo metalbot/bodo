@@ -54,3 +54,7 @@ body {
 .wide {
 	width: 95%;
 }
+.form input, textarea {
+	border: none;
+	background: transparent;
+}
