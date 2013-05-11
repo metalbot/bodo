@@ -5,9 +5,14 @@
             textarea.wide(rows="5", ng-model="card.story", placeholder="card.story")
             input.wide(type="text", ng-model="card.user", placeholder="card.user")
             .well
-                ul 
-                    li(ng-repeat="task in card.accept"){{task}}
-                ul.inline
+                ul.unstyled(ui-sortable="", ng-model="card.accept") 
+                    li(ng-repeat="task in card.accept")
+                        input(type="checkbox") 
+                        &nbsp;{{task}}
+                    li
+                        i.icon-plus &nbsp;
+                        input(type="text")
+                ul.inline(ui-sortable="")
                     li(ng-repeat="tag in card.tags")
                         span.label.label-info{{tag}}
         .modal-footer

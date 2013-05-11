@@ -8,6 +8,6 @@ body
                             .well.well-small.title.text-center                    
                                 strong{{phase.title}}
                             .well.well-small.card-container 
-                                ol.thumbnails
+                                ol.thumbnails(ui-sortable="{connectWith:'.thumbnails'}")
                                     li.card(ng-repeat="card in cards | byPhase:phase.phase")
                                         include kanban
